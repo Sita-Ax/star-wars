@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, useHistory } from "react-router-dom";
 import { MovieInfo } from "./components/views/MovieInfo";
 import { Character } from "./components/views/Character";
 import { Navbar } from "./components/general/Navbar";
@@ -8,6 +8,7 @@ function App() {
   const [movieInfo, setMovieInfo] = useState([]);//array to all films-movieInfo, setMovieInfo take the result of dataFilms in useEffect
   const [moviePeople, setMoviePeople] = useState({});//moviePeople send in to the chatacters and setMoviePeople is the handler func that sends in to Character
   const [loading, setLoading] = useState(true);
+  const history = useHistory();
 
   useEffect(() => {
     async function fetchInfo() {

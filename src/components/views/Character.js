@@ -25,7 +25,7 @@ export const Character = ({ moviePeople }) => {
   return(
     <>
       {loading ? <h2>Loading....</h2> :(
-        <Card bg="primary" style={{ width: "18rem" }}>
+        <Card bg="primary" style={{ width: "18rem" }}><h1>{moviePeople.title}</h1>
           <div style={{ border: "1px solid black" }}>Character:
             {peopleList.sort((a, b) => {
                 var A = a.name.toUpperCase();
